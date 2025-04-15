@@ -130,13 +130,18 @@ function loadDeferredData({context}: LoaderFunctionArgs) {
 export function Layout({children}: {children?: React.ReactNode}) {
   const nonce = useNonce();
   const data = useRouteLoaderData<RootLoader>('root');
-  const testVar = '1337';
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
+        <script src="https://static.emailmagnet.ai/popups.js" />
+        <link
+          rel="stylesheet"
+          href="https://static.emailmagnet.ai/popups.css"
+        />
+        <script src="https://static.emailmagnet.ai/env_var.js" />
         <Links />
       </head>
       <body>
