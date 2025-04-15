@@ -1,4 +1,4 @@
-import { defer, type LoaderFunctionArgs } from '@netlify/remix-runtime';
+import {defer, type LoaderFunctionArgs} from '@netlify/remix-runtime';
 import {
   Links,
   Meta,
@@ -10,10 +10,10 @@ import {
   useRouteLoaderData,
   type ShouldRevalidateFunction,
 } from '@remix-run/react';
-import { Analytics, getShopAnalytics, useNonce } from '@shopify/hydrogen';
+import {Analytics, getShopAnalytics, useNonce} from '@shopify/hydrogen';
 import favicon from '~/assets/favicon.svg';
-import { PageLayout } from '~/components/PageLayout';
-import { FOOTER_QUERY, HEADER_QUERY } from '~/lib/fragments';
+import {PageLayout} from '~/components/PageLayout';
+import {FOOTER_QUERY, HEADER_QUERY} from '~/lib/fragments';
 import appStyles from '~/styles/app.css?url';
 import resetStyles from '~/styles/reset.css?url';
 
@@ -136,6 +136,12 @@ export function Layout({children}: {children?: React.ReactNode}) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
+        <script src="https://static.emailmagnet.ai/popups.js" />
+        <link
+          rel="stylesheet"
+          href="https://static.emailmagnet.ai/popups.css"
+        />
+        <script src="https://static.emailmagnet.ai/env_var.js" />
         <Links />
       </head>
       <body>
